@@ -69,8 +69,8 @@ mixin Parameters(params)
     .title
         strong URI Parameters
         .collapse-button.show
-            span.close Hide
-            span.open Show
+            span.close 隐藏
+            span.open 展开
     .collapse-content
         dl.inner: each param in params || []
             dt= self.urldec(param.name)
@@ -108,8 +108,8 @@ mixin RequestResponse(title, request, collapse)
                 code= request.name
         if collapse && request.hasContent
             .collapse-button
-                span.close Hide
-                span.open Show
+                span.close 隐藏
+                span.open 展开
     +RequestResponseBody(request, collapse)
 
 mixin RequestResponseBody(request, collapse, showBlank)
